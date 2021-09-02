@@ -27,12 +27,13 @@ body {
 }
 
 header {
-    border-radius: 0 0 5px 5px;
+   border-radius: 0 0 5px 5px;
    padding: 10px;
    width: 100%;
    background-color: #36088d;
    text-align: center;
    color: #ffffff;
+   font-family: Arial, Helvetica, sans-serif;
 }
 
 b {
@@ -40,16 +41,12 @@ b {
    text-decoration: underline;
 }
 
-.custom-font {
+.formulario > h2 {
    color: #ffffff;
    font-family: "Josefin Sans", sans-serif;
 }
 
-#title {
-   font-family: Arial, Helvetica, sans-serif;
-}
-
-.p {
+.formulario .space-bot + p {
    color: #ffffff;
    font-family: Arial, Helvetica, sans-serif;
 }
@@ -65,7 +62,7 @@ main {
 .formulario {
    border-radius: 0.5rem 0 0 0.5rem;
    max-width: 17.5rem;
-   background-color: rgb(58, 0, 165);
+   background-color: #3a00a5;
    padding: 1.4rem;
 }
 
@@ -73,18 +70,23 @@ main {
    margin-bottom: 1rem;
 }
 
-input,
-select,
-button {
+input, select, button {
+   outline: none;
    margin-bottom: 1rem;
    width: 100%;
    padding: 0.5rem;
    border-radius: 1rem;
 }
 
-span {
-   font-weight: bold;
-   color: rgb(184, 30, 255);
+button, input, select{
+   transition: all;
+   transition: 1s;
+}
+
+button:hover, input:hover, select:hover{
+   border: 2px solid #ffffff;
+   background-color:rgb(58, 0, 165) ;
+   color: #ffffff;
 }
 
 footer {
@@ -97,13 +99,36 @@ footer {
    padding: 1rem;
 }
 
+figcaption{
+   color: #ffffff;
+   font-weight: bold;
+   text-align: center;
+}
+
 footer .rodape-foto img {
-   width: 300px;
+   width: 18.75rem;
 }
 
 .rodape-texto {
    font-family: Arial, Helvetica, sans-serif;
    font-weight: bold;
    max-width: 400px;
-   color: white;
+   color: #ffffff;
+}
+
+@media screen and (max-width:600px) {
+   
+   main{
+      justify-content: center;
+   }
+
+   figcaption{
+      margin-bottom: 1rem;
+   }
+
+   footer{
+      flex-wrap: wrap;
+      text-align: center;
+   }
+
 }
